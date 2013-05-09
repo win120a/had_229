@@ -25,11 +25,25 @@ public class Main extends Activity {   //活动程序Main
 
 			@Override   //实现OnClickListener接口
 			public void onClick(View arg0) {   //接口的方法
-				if(user_input.getText().toString().length() == 0){tv.setText("年份不能为空！");tve.setText("Year cannot be empty!");tvf.setText("年份不能為空！");return;}   //避免因空字符而出错
-				if(user_input.getText().toString().length() != 4){tv.setText("年份只能为四位！");tve.setText("Only to four-digit years!");tvf.setText("年份只能為四位！");return;}   //避免因非法字符而出错
+				
+				if(user_input.getText().toString().length() == 0){
+					tv.setText("年份不能为空！");
+					tve.setText("Year cannot be empty!");
+					tvf.setText("年份不能為空！");
+					return;
+				}   //避免因空字符而出错
+				
+				if(user_input.getText().toString().length() != 4){
+					tv.setText("年份只能为四位！");
+					tve.setText("Only to four-digit years!");
+					tvf.setText("年份只能為四位！");
+					return;
+				}   //避免因非法字符而出错
+				
 				int tmp = Integer.parseInt(user_input.getText().toString());	    //获取内容		
 				int temp2 = Integer.parseInt(user_input.getText().toString().substring(2));
 				int temp3 = Integer.parseInt(user_input.getText().toString().substring(3));
+				
 				if(temp2 == 0 && temp3 == 0){   //检查整百
 					int ys = tmp % 400;   //求余
 					if(ys == 0){   //除尽了
