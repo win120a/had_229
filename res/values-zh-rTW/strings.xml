@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_text">測試！</string>
+    <string name="tip">輸入年份：</string>
+    <string name="app_name">閏年測試</string>
+    
+</resources>
